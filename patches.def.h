@@ -288,7 +288,7 @@
  * dwm will crash on encountering such characters. Note that you will also need a font that
  * provides color emojis for this to work.
  */
-#define BAR_COLOR_EMOJI_PATCH 0
+#define BAR_COLOR_EMOJI_PATCH 1
 
 /* Updates the position of dmenu to match that of the bar. I.e. if topbar is 0 then dmenu
  * will appear at the bottom and if 1 then dmenu will appear at the top.
@@ -762,7 +762,7 @@
 /* Removes the border when there is only one window visible.
  * https://dwm.suckless.org/patches/noborder/
  */
-#define NOBORDER_PATCH 0
+#define NOBORDER_PATCH 1
 
 /* Enable modifying or removing dmenu in config.def.h which resulted previously in a
  * compilation error because two lines of code hardcode dmenu into dwm.
@@ -790,7 +790,7 @@
  * https://github.com/szatanjl/dwm/commit/1529909466206016f2101457bbf37c67195714c8
  * https://dwm.suckless.org/patches/alpha/dwm-fixborders-6.2.diff
  */
-#define NO_TRANSPARENT_BORDERS_PATCH 0
+#define NO_TRANSPARENT_BORDERS_PATCH 1
 
 /* Port of InstantWM's on_empty_keys functionality allowing keybindings that apply only when
  * a tag is empty. An example use case is being able to launch applications with first hand
@@ -1062,7 +1062,7 @@
  *
  * https://dwm.suckless.org/patches/swallow/
  */
-#define SWALLOW_PATCH 0
+#define SWALLOW_PATCH 1
 
 /* This patch depends on the pertag patch and makes it possible to switch focus with a single
  * shortcut (MOD+s) instead of having to think if you should use mod-j or mod-k for reaching
@@ -1221,7 +1221,7 @@
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-vanitygaps-6.2.diff
  * https://github.com/bakkeby/patches/blob/master/dwm/dwm-cfacts-vanitygaps-6.2.diff
  */
-#define VANITYGAPS_PATCH 0
+#define VANITYGAPS_PATCH 1
 
 /* This patch adds outer gaps for the monocle layout.
  * Most gaps patches tries to avoid gaps on the monocle layout, as it is often used as a

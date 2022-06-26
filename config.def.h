@@ -5,21 +5,21 @@
 static const unsigned int borderpx       = 0;   /* border pixel of windows */
 static const int corner_radius           = 10;
 #else
-static const unsigned int borderpx       = 1;   /* border pixel of windows */
+static const unsigned int borderpx       = 3;   /* border pixel of windows */
 #endif // ROUNDED_CORNERS_PATCH
 static const unsigned int snap           = 32;  /* snap pixel */
 #if SWALLOW_PATCH
-static const int swallowfloating         = 0;   /* 1 means swallow floating windows by default */
+static const int swallowfloating         = 1;   /* 1 means swallow floating windows by default */
 #endif // SWALLOW_PATCH
 #if NO_MOD_BUTTONS_PATCH
 static int nomodbuttons                  = 1;   /* allow client mouse button bindings that have no modifier */
 #endif // NO_MOD_BUTTONS_PATCH
 #if VANITYGAPS_PATCH
-static const unsigned int gappih         = 20;  /* horiz inner gap between windows */
+static const unsigned int gappih         = 10;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = 10;  /* vert inner gap between windows */
 static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 30;  /* vert outer gap between windows and screen edge */
-static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
+static const unsigned int gappov         = 10;  /* vert outer gap between windows and screen edge */
+static const int smartgaps_fact          = 0;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 #endif // VANITYGAPS_PATCH
 #if AUTOSTART_PATCH
 static const char autostartblocksh[]     = "autostart_blocking.sh";
@@ -127,20 +127,20 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "monospace 10";
 #else
-static const char *fonts[]               = { "monospace:size=10" };
+static const char *fonts[]               = { "Comic Code Ligatures Nerd Font Mono:size=11" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "monospace:size=10";
+static const char dmenufont[]            = "Comic Code Ligatures Nerd Font Mono:size=11";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#bbbbbb";
-static char normbgcolor[]                = "#222222";
-static char normbordercolor[]            = "#444444";
+static char normfgcolor[]                = "#ebdbb2";
+static char normbgcolor[]                = "#3c3836";
+static char normbordercolor[]            = "#665c54";
 static char normfloatcolor[]             = "#db8fd9";
 
-static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#005577";
-static char selbordercolor[]             = "#005577";
+static char selfgcolor[]                 = "#282828";
+static char selbgcolor[]                 = "#d8a567";
+static char selbordercolor[]             = "#d8a567";
 static char selfloatcolor[]              = "#005577";
 
 static char titlenormfgcolor[]           = "#bbbbbb";
@@ -170,7 +170,7 @@ static char hidselbgcolor[]              = "#222222";
 
 static char urgfgcolor[]                 = "#bbbbbb";
 static char urgbgcolor[]                 = "#222222";
-static char urgbordercolor[]             = "#ff0000";
+static char urgbordercolor[]             = "#ea6962";
 static char urgfloatcolor[]              = "#db8fd9";
 
 #if RENAMED_SCRATCHPADS_PATCH
@@ -459,6 +459,7 @@ static const Rule rules[] = {
 	RULE(.wintype = WTYPE "SPLASH", .isfloating = 1)
 	RULE(.class = "Gimp", .tags = 1 << 4)
 	RULE(.class = "Firefox", .tags = 1 << 7)
+    RULE(.class = "net-runelite-client-Runelite", .isfloating = 1)
 	#if RENAMED_SCRATCHPADS_PATCH
 	RULE(.instance = "spterm", .scratchkey = 's', .isfloating = 1)
 	#elif SCRATCHPADS_PATCH
@@ -735,7 +736,7 @@ static const char *xkb_layouts[]  = {
 #endif // XKB_PATCH
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #if COMBO_PATCH && SWAPTAGS_PATCH && TAGOTHERMONITOR_PATCH
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      comboview,      {.ui = 1 << TAG} }, \
