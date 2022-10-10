@@ -98,6 +98,9 @@
 #endif
 
 /* Other patches */
+#if ALT_TAB_PATCH
+#include "alttab.c"
+#endif
 #if ASPECTRESIZE_PATCH
 #include "aspectresize.c"
 #endif
@@ -192,6 +195,9 @@
 #endif
 #if MOVESTACK_PATCH
 #include "movestack.c"
+#endif
+#if NAMETAG_PATCH
+#include "nametag.c"
 #endif
 #if NO_MOD_BUTTONS_PATCH
 #include "nomodbuttons.c"
