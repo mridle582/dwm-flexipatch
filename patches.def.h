@@ -357,6 +357,12 @@
  */
 #define BAR_NO_COLOR_EMOJI_PATCH 0
 
+/* This patch adds back in the workaround for a BadLength error in the Xft library when color
+ * glyphs are used. This is for systems that do not have an updated version of the Xft library
+ * (or generally prefer monochrome fonts).
+ */
+#define BAR_NO_COLOR_EMOJI_PATCH 0
+
 /* This patch adds vertical and horizontal space between the statusbar and the edge of the screen.
  * https://dwm.suckless.org/patches/barpadding/
  */
